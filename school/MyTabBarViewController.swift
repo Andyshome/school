@@ -7,9 +7,8 @@
 //
 
 import UIKit
-//hello,world
 class MyTabBarViewController: UITabBarController {
-
+// make sure the first page you see it the main page to login.
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 2
