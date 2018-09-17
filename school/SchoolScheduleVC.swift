@@ -37,7 +37,7 @@ class SchoolScheduleVC: UIViewController {
             labelThree.isHidden = true
             labelFour.isHidden = true
         } else if ScheduleSegmentedControl.selectedSegmentIndex == 2 {
-        //case 3
+        //case 3,adccsdfsf
             labelOne.isHidden = true
             labelTwo.isHidden = true
             labelThree.isHidden = false
