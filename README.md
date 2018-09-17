@@ -1,6 +1,7 @@
 # school
 Bishop Allen Academy official App
 
-# Target
+Target
+--------
 
 Clean the code and comment everything
