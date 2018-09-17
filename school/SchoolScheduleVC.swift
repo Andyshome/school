@@ -22,24 +22,28 @@ class SchoolScheduleVC: UIViewController {
         
     }
     
-
+//change to different schedule with segmentControl
     @IBAction func segmentedControlPressed(_ sender: Any) {
+        //case 1
         if ScheduleSegmentedControl.selectedSegmentIndex == 0 {
             labelOne.isHidden = false
             labelTwo.isHidden = true
             labelThree.isHidden = true
             labelFour.isHidden = true
         } else if ScheduleSegmentedControl.selectedSegmentIndex == 1{
+        //case 2
             labelOne.isHidden = true
             labelTwo.isHidden = false
             labelThree.isHidden = true
             labelFour.isHidden = true
         } else if ScheduleSegmentedControl.selectedSegmentIndex == 2 {
+        //case 3,adccsdfsf
             labelOne.isHidden = true
             labelTwo.isHidden = true
             labelThree.isHidden = false
             labelFour.isHidden = true
         } else {
+        //case 4
             labelOne.isHidden = true
             labelTwo.isHidden = true
             labelThree.isHidden = true
