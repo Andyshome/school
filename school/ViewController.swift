@@ -66,6 +66,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
        // print(longTermArray)
        // print(cafeSpecialsArray)
     }
+    //create a objc function for the selector to use to refresh the data
     @objc func refreshData() {
         dailyArray.removeAll()
         listDailyAnnoucements()
