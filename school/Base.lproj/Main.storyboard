@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbM-ap-9AT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbM-ap-9AT">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -140,17 +140,6 @@
                                     <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZj-z5-pud"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxN-aA-AwT">
-                                <rect key="frame" x="240" y="440" width="50" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="14h-4E-1cy"/>
-                                    <constraint firstAttribute="width" constant="50" id="oFe-nF-uGW"/>
-                                </constraints>
-                                <state key="normal" image="refreshbutton"/>
-                                <connections>
-                                    <action selector="refreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u9b-mC-pdB"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEN-Vp-0Jy">
                                 <rect key="frame" x="0.0" y="800" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -191,14 +180,12 @@
                             <constraint firstItem="Rb8-WJ-JFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Dh-oS-je8"/>
                             <constraint firstItem="WGC-ES-41z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3JV-GK-hxY"/>
                             <constraint firstItem="xzM-TU-dfC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4wJ-p2-DbX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fxN-aA-AwT" secondAttribute="bottom" constant="30" id="9EF-Go-5Oj"/>
                             <constraint firstItem="WGC-ES-41z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="B62-k2-Nr0"/>
                             <constraint firstItem="Rb8-WJ-JFT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BSG-1m-5DX"/>
                             <constraint firstItem="Od3-w0-Brv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CJV-qb-NIQ"/>
                             <constraint firstItem="Rb8-WJ-JFT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DYD-fY-fQ1"/>
                             <constraint firstItem="hOc-Ff-Did" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IlU-Do-ipz"/>
                             <constraint firstItem="WGC-ES-41z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JBQ-H8-Qop"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fxN-aA-AwT" secondAttribute="trailing" constant="30" id="JSf-X5-YRv"/>
                             <constraint firstItem="i3V-7t-MjH" firstAttribute="top" secondItem="hOc-Ff-Did" secondAttribute="bottom" id="OQQ-uf-EaY"/>
                             <constraint firstItem="Od3-w0-Brv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TUC-e0-OOo"/>
                             <constraint firstItem="i3V-7t-MjH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VDi-xD-zhd"/>
@@ -552,7 +539,7 @@ Period Four:	1:36-2:52</string>
                                 <rect key="frame" x="73" y="99.5" width="174.5" height="320.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr. Baraam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1E-cY-uDR">
-                                        <rect key="frame" x="44" y="0.0" width="87" height="20.5"/>
+                                        <rect key="frame" x="43.5" y="0.0" width="87" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -588,19 +575,19 @@ Period Four:	1:36-2:52</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duncan Gillies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ta-fU-kgp">
-                                        <rect key="frame" x="33" y="225" width="109" height="20.5"/>
+                                        <rect key="frame" x="32.5" y="225" width="109" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethan Kwon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-80-HHS">
-                                        <rect key="frame" x="42.5" y="262.5" width="90" height="20.5"/>
+                                        <rect key="frame" x="42" y="262.5" width="90" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" text="Mattia Maci" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WI-ZP-Ft9">
-                                        <rect key="frame" x="43" y="300" width="89" height="20.5"/>
+                                        <rect key="frame" x="42.5" y="300" width="89" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -750,7 +737,7 @@ Period Four:	1:36-2:52</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desired grade (%)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a7-Yk-tjh">
-                                <rect key="frame" x="91.5" y="183" width="138" height="21"/>
+                                <rect key="frame" x="91" y="183" width="138" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -820,7 +807,6 @@ Period Four:	1:36-2:52</string>
         <image name="address_book" width="30" height="30"/>
         <image name="calculator" width="30" height="30"/>
         <image name="planner" width="30" height="30"/>
-        <image name="refreshbutton" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zUU-sW-tFN"/>
