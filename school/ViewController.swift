@@ -25,10 +25,12 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     var longTermArray: [String] = []
     // Array that will hold the cafe Specials annoucements
     var cafeSpecialsArray: [String] = []
-  
+    //create a refreshcontrol to repleace a refresh button
+    let refreshControl = UIRefreshControl()
     // If modifying these scopes, delete your previously saved credentials by resetting the iOS simulator or uninstall the app.
     private let scopes = [kGTLRAuthScopeSheetsSpreadsheetsReadonly]
     private let service = GTLRSheetsService()
+    
     let signInButton = GIDSignInButton()
 
     override func viewDidLoad() {
@@ -48,7 +50,10 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         
         pressingSegments()
         
+        refreshControl.addTarget(self, action: #selector(refreshData),
+                                 for: .valueChanged)
         
+        dailyTableView.addSubview(refreshControl)
         
         // code to change location of sign in button
         signInButton.center = view.center
@@ -61,25 +66,21 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
        // print(longTermArray)
        // print(cafeSpecialsArray)
     }
-    
-    
-    @IBAction func mySegmentPressed(_ sender: Any) {
-       pressingSegments()
-    }
-    
-    @IBAction func refreshButton(_ sender: Any) {
-        // emptying out the daily array and repopulating it "refreshing the data"
-      
-        
-        
+    @objc func refreshData() {
         dailyArray.removeAll()
         listDailyAnnoucements()
         longTermArray.removeAll()
         listLongTermAnnoucements()
         cafeSpecialsArray.removeAll()
         listCafeSpecialsAnnoucements()
+        self.refreshControl.endRefreshing()
     }
     
+    @IBAction func mySegmentPressed(_ sender: Any) {
+       pressingSegments()
+    }
+    
+
     // setting the number of cells to the number of elements in the daily array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
