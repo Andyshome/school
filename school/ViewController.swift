@@ -30,7 +30,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     private let scopes = [kGTLRAuthScopeSheetsSpreadsheetsReadonly]
     private let service = GTLRSheetsService()
     let signInButton = GIDSignInButton()
-    let refreshControl = UIRefreshControl()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,24 +49,14 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         pressingSegments()
         
         
-        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
-        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Data")
-        dailyTableView.addSubview(refreshControl)
+        
         // code to change location of sign in button
         signInButton.center = view.center
         
         
     }
     
-    @objc func refreshData(){
-        dailyArray.removeAll()
-        listDailyAnnoucements()
-        longTermArray.removeAll()
-        listLongTermAnnoucements()
-        cafeSpecialsArray.removeAll()
-        listCafeSpecialsAnnoucements()
-        self.refreshControl.endRefreshing()
-    }
+    
     @IBAction func testButton(_ sender: Any) {
        // print(longTermArray)
        // print(cafeSpecialsArray)
@@ -76,7 +66,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     @IBAction func mySegmentPressed(_ sender: Any) {
        pressingSegments()
     }
-    /*
+    
     @IBAction func refreshButton(_ sender: Any) {
         // emptying out the daily array and repopulating it "refreshing the data"
       
@@ -89,7 +79,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         cafeSpecialsArray.removeAll()
         listCafeSpecialsAnnoucements()
     }
-    */
+    
     // setting the number of cells to the number of elements in the daily array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
