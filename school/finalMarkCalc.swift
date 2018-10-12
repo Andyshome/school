@@ -8,7 +8,7 @@
 
 import UIKit
 
-class finalMarkCalc: UIViewController {
+class finalMarkCalc: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var currentGradeOutlet: UITextField!
@@ -68,7 +68,7 @@ class finalMarkCalc: UIViewController {
                 
                 self.present(alert, animated: true)
             } else {
-                let alert = UIAlertController(title: "It's possible!", message: "May the odds forever be in your favour", preferredStyle: .alert)
+                let alert = UIAlertController(title: "It's possible! Work hard!", message: "May the odds forever be in your favour", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Pray for me", style: .cancel, handler: nil))
                 
@@ -88,5 +88,13 @@ class finalMarkCalc: UIViewController {
     @objc func doneClicked() {
         view.endEditing(true)
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return (true)
+    }
+    
 }
