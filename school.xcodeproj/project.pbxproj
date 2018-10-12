@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		211F8D12206AD6CC001C4626 /* finalMarkCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F8D11206AD6CC001C4626 /* finalMarkCalc.swift */; };
 		2139457720935FFD002CE73D /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2139457620935FFD002CE73D /* MyTabBarViewController.swift */; };
 		21695148204DE4040030777C /* TeacherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695147204DE4040030777C /* TeacherListTableViewController.swift */; };
 		5D4718A61FD87B1200E71774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */; };
 		5D4718A71FD87B1200E71774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */; };
 		5D4718A81FD87B1200E71774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */; };
 		5D49EA751FD87A7300FD2791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D49EA731FD87A7300FD2791 /* Main.storyboard */; };
-		5D49EA771FD87A7300FD2791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D49EA761FD87A7300FD2791 /* Assets.xcassets */; };
 		5D49EA7A1FD87A7300FD2791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D49EA781FD87A7300FD2791 /* LaunchScreen.storyboard */; };
 		5D49EA851FD87A7300FD2791 /* schoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49EA841FD87A7300FD2791 /* schoolTests.swift */; };
 		5D49EA901FD87A7300FD2791 /* schoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49EA8F1FD87A7300FD2791 /* schoolUITests.swift */; };
 		5D69CC3A1FD87F900094ED8A /* myCustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69CC371FD87F8F0094ED8A /* myCustomCellTableViewCell.swift */; };
 		5D69CC3B1FD87F900094ED8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69CC381FD87F8F0094ED8A /* ViewController.swift */; };
 		5D69CC3C1FD87F900094ED8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69CC391FD87F900094ED8A /* AppDelegate.swift */; };
-		CABD191220A273F2008993B4 /* SchoolScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD191120A273F2008993B4 /* SchoolScheduleVC.swift */; };
+		7D17AC4B217110610075D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D17AC4A217110610075D82A /* Assets.xcassets */; };
+		7D74DE8C21712C430014E4EE /* SchoolScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D74DE8B21712C430014E4EE /* SchoolScheduleVC.swift */; };
+		7DD3C8B6217100D70015D459 /* mailAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */; };
+		7DFD5986216FD5530063B353 /* ttcBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD5985216FD5530063B353 /* ttcBusViewController.swift */; };
+		7DFD5988216FD5F50063B353 /* finalMarkCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD5987216FD5F50063B353 /* finalMarkCalc.swift */; };
 		F292E8A1207466A90068D2BF /* mailingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292E8A0207466A90068D2BF /* mailingList.swift */; };
 		F51B580435F177612450945B /* Pods_school.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4803458BA62033A9A3CC7A03 /* Pods_school.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		211F8D11206AD6CC001C4626 /* finalMarkCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalMarkCalc.swift; sourceTree = "<group>"; };
 		2139457620935FFD002CE73D /* MyTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
 		21695147204DE4040030777C /* TeacherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherListTableViewController.swift; sourceTree = "<group>"; };
 		4803458BA62033A9A3CC7A03 /* Pods_school.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_school.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +53,6 @@
 		5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D49EA6C1FD87A7300FD2791 /* school.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = school.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D49EA741FD87A7300FD2791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5D49EA761FD87A7300FD2791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D49EA791FD87A7300FD2791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D49EA7B1FD87A7300FD2791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D49EA801FD87A7300FD2791 /* schoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = schoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +66,12 @@
 		5D69CC381FD87F8F0094ED8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D69CC391FD87F900094ED8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6649167E2F442B4B21B446E5 /* Pods-school.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-school.debug.xcconfig"; path = "Pods/Target Support Files/Pods-school/Pods-school.debug.xcconfig"; sourceTree = "<group>"; };
-		CABD191120A273F2008993B4 /* SchoolScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolScheduleVC.swift; sourceTree = "<group>"; };
+		7D17AC4A217110610075D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D5334E1215AF0AD00188A7C /* school.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = school.entitlements; sourceTree = "<group>"; };
+		7D74DE8B21712C430014E4EE /* SchoolScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolScheduleVC.swift; sourceTree = "<group>"; };
+		7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mailAddressTableViewCell.swift; sourceTree = "<group>"; };
+		7DFD5985216FD5530063B353 /* ttcBusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ttcBusViewController.swift; sourceTree = "<group>"; };
+		7DFD5987216FD5F50063B353 /* finalMarkCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finalMarkCalc.swift; sourceTree = "<group>"; };
 		F292E8A0207466A90068D2BF /* mailingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mailingList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,14 +144,17 @@
 		5D49EA6E1FD87A7300FD2791 /* school */ = {
 			isa = PBXGroup;
 			children = (
+				7D5334E1215AF0AD00188A7C /* school.entitlements */,
 				5D49EA731FD87A7300FD2791 /* Main.storyboard */,
 				2139457620935FFD002CE73D /* MyTabBarViewController.swift */,
-				CABD191120A273F2008993B4 /* SchoolScheduleVC.swift */,
 				F292E8A0207466A90068D2BF /* mailingList.swift */,
-				211F8D11206AD6CC001C4626 /* finalMarkCalc.swift */,
-				21695147204DE4040030777C /* TeacherListTableViewController.swift */,
-				5D49EA761FD87A7300FD2791 /* Assets.xcassets */,
+				7DFD5987216FD5F50063B353 /* finalMarkCalc.swift */,
+				7D17AC4A217110610075D82A /* Assets.xcassets */,
+				7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */,
+				7DFD5985216FD5530063B353 /* ttcBusViewController.swift */,
 				5D49EA781FD87A7300FD2791 /* LaunchScreen.storyboard */,
+				21695147204DE4040030777C /* TeacherListTableViewController.swift */,
+				7D74DE8B21712C430014E4EE /* SchoolScheduleVC.swift */,
 				5D49EA7B1FD87A7300FD2791 /* Info.plist */,
 				5D69CC391FD87F900094ED8A /* AppDelegate.swift */,
 				5D69CC371FD87F8F0094ED8A /* myCustomCellTableViewCell.swift */,
@@ -247,6 +255,14 @@
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					5D49EA7F1FD87A7300FD2791 = {
 						CreatedOnToolsVersion = 9.1;
@@ -287,7 +303,7 @@
 			files = (
 				5D49EA7A1FD87A7300FD2791 /* LaunchScreen.storyboard in Resources */,
 				5D4718A61FD87B1200E71774 /* GoogleService-Info.plist in Resources */,
-				5D49EA771FD87A7300FD2791 /* Assets.xcassets in Resources */,
+				7D17AC4B217110610075D82A /* Assets.xcassets in Resources */,
 				5D49EA751FD87A7300FD2791 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,9 +333,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-school/Pods-school-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftBus/SwiftBus.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBus.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,9 +361,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-school/Pods-school-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -347,13 +379,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-school-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -364,13 +399,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D69CC3C1FD87F900094ED8A /* AppDelegate.swift in Sources */,
+				7DFD5986216FD5530063B353 /* ttcBusViewController.swift in Sources */,
 				F292E8A1207466A90068D2BF /* mailingList.swift in Sources */,
+				7D74DE8C21712C430014E4EE /* SchoolScheduleVC.swift in Sources */,
 				5D69CC3B1FD87F900094ED8A /* ViewController.swift in Sources */,
-				211F8D12206AD6CC001C4626 /* finalMarkCalc.swift in Sources */,
 				2139457720935FFD002CE73D /* MyTabBarViewController.swift in Sources */,
 				21695148204DE4040030777C /* TeacherListTableViewController.swift in Sources */,
 				5D69CC3A1FD87F900094ED8A /* myCustomCellTableViewCell.swift in Sources */,
-				CABD191220A273F2008993B4 /* SchoolScheduleVC.swift in Sources */,
+				7DD3C8B6217100D70015D459 /* mailAddressTableViewCell.swift in Sources */,
+				7DFD5988216FD5F50063B353 /* finalMarkCalc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -528,7 +565,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -542,12 +579,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = school/school.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DZ9Y5FRKK;
+				DEVELOPMENT_TEAM = 7JSS76SUYC;
 				INFOPLIST_FILE = school/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = skylove.club;
+				PRODUCT_BUNDLE_IDENTIFIER = bishopallenacademy.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "school/school-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -562,12 +600,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = school/school.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DZ9Y5FRKK;
+				DEVELOPMENT_TEAM = 7JSS76SUYC;
 				INFOPLIST_FILE = school/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = skylove.club;
+				PRODUCT_BUNDLE_IDENTIFIER = bishopallenacademy.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "school/school-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
