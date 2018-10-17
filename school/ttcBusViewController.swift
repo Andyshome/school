@@ -40,16 +40,16 @@ class ttcBusViewController: UIViewController {
     }
     
     @IBAction func RoyalYork15(_ sender: Any) {
-        getPRedictionTime(RouteTag: "15", StopTag: "8619")
-    }
-    @IBAction func RoyalYork76(_ sender: Any) {
-        getPRedictionTime(RouteTag: "76", StopTag: "8619")
-    }
-    @IBAction func Sherway15(_ sender: Any) {
         getPRedictionTime(RouteTag: "15", StopTag: "2586")
     }
-    @IBAction func LakeShore76(_ sender: Any) {
+    @IBAction func RoyalYork76(_ sender: Any) {
         getPRedictionTime(RouteTag: "76", StopTag: "2586")
+    }
+    @IBAction func Sherway15(_ sender: Any) {
+        getPRedictionTime(RouteTag: "15", StopTag: "8619")
+    }
+    @IBAction func LakeShore76(_ sender: Any) {
+        getPRedictionTime(RouteTag: "76", StopTag: "8619")
     }
     
     func showAlertControllerWithTitle(_ title: String, message: String) {
