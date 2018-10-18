@@ -43,3 +43,6 @@ Issus
 -------
 If you have any problems, please submit a [Issue](https://github.com/BishopAllenAcademy/school/issues) in our program, we will answer it as soon as possible.
 
+Licence
+---------
+Bishop Allen Academy Official App is available under the GPL3.0 license. See the LICENSE file for more info.
