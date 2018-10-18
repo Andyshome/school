@@ -259,27 +259,26 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     
     
     // Display the daily spreadsheet:
-    // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
     func listDailyAnnoucements() {
-        let spreadsheetId = "1aHFMi0PBcZnNWCp384Grt--rxYHpvFAG8F5s-hon-C8"
+        let spreadsheetId = ""
         let range = "Form Responses 1!A2:C"
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadsheetId, range:range)
         service.executeQuery(query, delegate: self, didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
     // Display the Long Term spreadsheet:
-    // https://docs.google.com/spreadsheets/d/1QvQFLhSy5gw712dXW3osUrFFXgfIEzaiuw08TC-Nmgg/edit#gid=1922002077
+    // https://docs.google.com/spreadsheets/d/
     func listLongTermAnnoucements() {
-        let spreadsheetId = "1QvQFLhSy5gw712dXW3osUrFFXgfIEzaiuw08TC-Nmgg"
+        let spreadsheetId = ""
         let range = "Form Responses 1!A2:C"
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadsheetId, range:range)
         service.executeQuery(query, delegate: self, didFinish: #selector(displayResultWithTicketLongTerm(ticket:finishedWithObject:error:)))
     }
     
     // Display the Long Term Cafe Specials:
-    // https://docs.google.com/spreadsheets/d/1EpoljIexXIUOJ8XtQlilPNBjHWqaU9F4nA-EsKQSwIY/edit#gid=1958324540
+    // https://docs.google.com/spreadsheets/d/
     func listCafeSpecialsAnnoucements() {
-        let spreadsheetId = "1EpoljIexXIUOJ8XtQlilPNBjHWqaU9F4nA-EsKQSwIY"
+        let spreadsheetId = ""
         let range = "Form Responses 1!A2:C"
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadsheetId, range:range)
         service.executeQuery(query, delegate: self, didFinish: #selector(displayResultWithTicketCafeSpecials(ticket:finishedWithObject:error:)))
