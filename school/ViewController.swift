@@ -3,20 +3,20 @@ import GoogleSignIn
 import UIKit
 
 class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, UITableViewDataSource, UITableViewDelegate {
- 
+    
     // Outlet for my segmented Control
     @IBOutlet weak var mySegment: UISegmentedControl!
-   
+    
     // Outlet for the Daily annoucements UITableView
     @IBOutlet weak var dailyTableView: UITableView!
     // Outlet for the Long Term annoucements UITableView
     @IBOutlet weak var longTermTableView: UITableView!
     // Outlet for the Cafe Specials annoucements UITableView
     @IBOutlet weak var cafeSpecialsTableView: UITableView!
-   
+    
     //Creating a label for any messages that need to be displayed
     @IBOutlet weak var labelMessages: UILabel!
-
+    
     @IBOutlet weak var signInBlock: UIImageView!
     
     // Array that will hold the daily annoucements
@@ -25,12 +25,12 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     var longTermArray: [String] = []
     // Array that will hold the cafe Specials annoucements
     var cafeSpecialsArray: [String] = []
-  
+    
     // If modifying these scopes, delete your previously saved credentials by resetting the iOS simulator or uninstall the app.
     private let scopes = [kGTLRAuthScopeSheetsSpreadsheetsReadonly]
     private let service = GTLRSheetsService()
     let signInButton = GIDSignInButton()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +41,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         GIDSignIn.sharedInstance().scopes = scopes
         GIDSignIn.sharedInstance().signInSilently()
         
-    
+        
         
         // Add the sign-in button.
         view.addSubview(signInButton)
@@ -58,18 +58,18 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     
     
     @IBAction func testButton(_ sender: Any) {
-       // print(longTermArray)
-       // print(cafeSpecialsArray)
+        // print(longTermArray)
+        // print(cafeSpecialsArray)
     }
     
     
     @IBAction func mySegmentPressed(_ sender: Any) {
-       pressingSegments()
+        pressingSegments()
     }
     
     @IBAction func refreshButton(_ sender: Any) {
         // emptying out the daily array and repopulating it "refreshing the data"
-      
+        
         
         
         dailyArray.removeAll()
@@ -82,7 +82,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     
     // setting the number of cells to the number of elements in the daily array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
+        
         if tableView.tag == 1 {
             return(dailyArray.count)
         } else if tableView.tag == 2 {
@@ -95,7 +95,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! myCustomCellTableViewCell
-
+        
         if tableView.tag == 1 {
             cell.labelDaily.text = dailyArray[indexPath.row]
         } else if tableView.tag == 2 {
@@ -103,13 +103,13 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         } else {
             cell.labelCafeSpecials.text = cafeSpecialsArray[indexPath.row]
         }
-
+        
         return cell
     }
     
-   
     
-
+    
+    
     // Helper for showing an alert
     func showAlert(title : String, message: String) {
         let alert = UIAlertController(
@@ -117,7 +117,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
             message: message,
             preferredStyle: UIAlertControllerStyle.alert
         )
-
+        
         let ok = UIAlertAction(
             title: "OK",
             style: UIAlertActionStyle.default,
@@ -127,8 +127,8 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         present(alert, animated: true, completion: nil)
     }
     
-
-
+    
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
         
@@ -145,7 +145,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
             listCafeSpecialsAnnoucements()
             emailUsedByStudent = user.profile.email
             print("this id is the following \(emailUsedByStudent)")
-        
+            
         }
         
         if emailUsedByStudent.contains("@tcdsb.ca") {
@@ -153,7 +153,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
             mySegment.isEnabled = true
             
         } else {
-           
+            
             print("before")
             
             dailyTableView.isHidden = true
@@ -169,7 +169,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
             
             // code to change location of sign in button
             signInButton.center = view.center
-         
+            
             print("after")
             showAlert(title: "Must use a TCDSB email" , message: "please clear the app from memory and re-launch it to sign in with tcdsb e-mail")
         }
@@ -257,7 +257,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         
     }
     
-
+    
     // Display the daily spreadsheet:
     // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
     func listDailyAnnoucements() {

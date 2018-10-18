@@ -8,7 +8,7 @@
 
 import UIKit
 
-class finalMarkCalc: UIViewController {
+class finalMarkCalc: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var currentGradeOutlet: UITextField!
@@ -18,14 +18,14 @@ class finalMarkCalc: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         currentGradeOutlet.keyboardType = UIKeyboardType.numberPad
+        //change the keyboard type to number to make sure you do not enter any strings
+        currentGradeOutlet.keyboardType = UIKeyboardType.numberPad
         desiredGradeOutlet.keyboardType = UIKeyboardType.numberPad
         examWeightOutlet.keyboardType = UIKeyboardType.numberPad
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        
+        //auto layout
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
@@ -44,14 +44,14 @@ class finalMarkCalc: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //set up the default value
     var currentGrade = 0.00
     var desiredGrade = 0.00
     var examWeight = 0.00
     var examMark = 0.00
     
     @IBAction func calcButton(_ sender: Any) {
-        
+        // to vertify the text field is not empty
         if currentGradeOutlet.text != "" && desiredGradeOutlet.text != "" && examWeightOutlet.text != "" {
           
             currentGrade = Double(currentGradeOutlet.text!)!
@@ -68,7 +68,7 @@ class finalMarkCalc: UIViewController {
                 
                 self.present(alert, animated: true)
             } else {
-                let alert = UIAlertController(title: "It's possible!", message: "May the odds forever be in your favour", preferredStyle: .alert)
+                let alert = UIAlertController(title: "It's possible! Work hard!", message: "May the odds forever be in your favour", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Pray for me", style: .cancel, handler: nil))
                 
@@ -88,5 +88,13 @@ class finalMarkCalc: UIViewController {
     @objc func doneClicked() {
         view.endEditing(true)
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return (true)
+    }
+    
 }
