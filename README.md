@@ -33,7 +33,7 @@ Reference
 Bishop Allen Academy Offical App use these open source programs:
 
 * [SwiftyBus](https://github.com/MrAdamBoyd/SwiftBus)
-* [Google Restful Api/sheet](https://github.com/google/google-api-objectivec-client-for-rest)
+* [Google Restful Api](https://github.com/google/google-api-objectivec-client-for-rest)
 
 Thanks to these orgnizations to open source to our program!
 
