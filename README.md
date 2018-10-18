@@ -1,4 +1,4 @@
-# school
+# Offical BAA App
 Official App of Bishop Allen Academy
 
 This is develop branch, please hand in your code in this branch
@@ -28,7 +28,7 @@ Known Bugs
 
 
 
-reference
+Reference
 -------
 Bishop Allen Academy Offical App use these open source programs:
 
