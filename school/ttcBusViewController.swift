@@ -32,7 +32,7 @@ class ttcBusViewController: UIViewController {
                 print("Stop: \(stop.stopTitle)")
                 print("Predictions at stop \(predictionStrings) mins")
                 
-                self.showAlertControllerWithTitle("Stop Predictions for stop \(stop.stopTitle)", message: "\(predictionStrings)")
+                self.showAlertControllerWithTitle("Stop Predictions for stop \(stop.stopTitle)", message: "\(predictionStrings) mins")
             case let .error(error):
                 self.showAlertControllerWithTitle("Error", message: error.localizedDescription)
             }
