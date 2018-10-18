@@ -26,7 +26,9 @@ Known Bugs
 -----------
 * Auto layout does not work in some special devices.
 
-
+Requiements
+------
+Official BAA App will run on iOS 10 and above.
 
 Reference
 -------
