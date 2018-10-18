@@ -1,3 +1,4 @@
+![](https://github.com/BishopAllenAcademy/school/blob/master/school/Assets.xcassets/AppIcon.appiconset/Icon-60%403x.png)
 # Offical BAA App
 Official App of Bishop Allen Academy
 
