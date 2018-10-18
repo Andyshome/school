@@ -18,14 +18,14 @@ class finalMarkCalc: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         currentGradeOutlet.keyboardType = UIKeyboardType.numberPad
+        //change the keyboard type to number to make sure you do not enter any strings
+        currentGradeOutlet.keyboardType = UIKeyboardType.numberPad
         desiredGradeOutlet.keyboardType = UIKeyboardType.numberPad
         examWeightOutlet.keyboardType = UIKeyboardType.numberPad
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        
+        //auto layout
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
@@ -44,14 +44,14 @@ class finalMarkCalc: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //set up the default value
     var currentGrade = 0.00
     var desiredGrade = 0.00
     var examWeight = 0.00
     var examMark = 0.00
     
     @IBAction func calcButton(_ sender: Any) {
-        
+        // to vertify the text field is not empty
         if currentGradeOutlet.text != "" && desiredGradeOutlet.text != "" && examWeightOutlet.text != "" {
           
             currentGrade = Double(currentGradeOutlet.text!)!

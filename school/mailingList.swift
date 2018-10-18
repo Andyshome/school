@@ -16,6 +16,9 @@ class mailingList: UIViewController, UITableViewDataSource, UITableViewDelegate,
         var name : String
         var emailAddress : String
     }
+    
+    
+    
     var Teacher : [teachersProfile] = []
     var nameFit = [teachersProfile]()
     let names: [String] = ["Adzija, Zeljka", "Amorim, N", "Attard, Tanya", "Baraam, Aus", "Baptista, Ana", "Barone, John", "Baskey, Lee Anne", "Bianco, Enrico", "Bregar, M", "Brennan, Lucy", "Byrne, Chris", "Caravaggio, Sandra", "Carboni, Josie", "Chan, Stephen", "Chui, Diana", "Clough, Jane Ann", "Conroy, Cecilia", "Contreras, Clem", "Correia, Steve", "Cuda, Michael", "Cuvalo-Pedro, Drazana", "D'amata, Maria", "Dairone-Crasto, Antonella", "Defina, Asta", "Del Duca, Gina", "Del Monte, Adrian", "De Julio, Lisa", "De Sousa, Silvia", "Di Paola, Massimo", "Difiore, Josie", "Duggan, P", "Elliot, Lenita", "Faieta, S", "Ferrari, Jennifer", "Ferro, Joe", "Franklin, S", "Franze, T", "Frlan, Nik", "Gallippi, Andria", "Garofalo, Davide", "Gaudet, Melanie", "Giangioppo, Daniela", "Grant, Jennifer", "Grant, Patrick", "Haddad, Asad", "Henderson, Kathleen", "Ho-Lau, Rita Sam Man", "Hypolite, Gemma", "Italiano, Dina", "Iannarilli, Alessio", "Joseph, Dorothy", "Kalinowski, Jan", "Kassabian, Caroline", "Kauffman, Gabrielle", "Kelly, S", "Kerkos-Desouza, Anselm", "Koenig, Ed", "Kos, Andrew", "Lains, Suzette", "Leech, Monica", "Leopold-Muresan, Mirela", "Loudon, Mark", "Mabrucco, Mario", "Macdonald, Arlene", "Malfara, Josie", "Marcolini, Liliana", "Marino, Rosamaria", "Mastrofrancesco, Dina", "Matak, Adam", "McDougall, Doug", "McGrath, Jane", "McGuckin, Paulette", "Meligrana, Stefanie", "Mera, A", "Montenegro-Ieraci, Jackeline", "Morassutti, Bernice", "Moriana, Joyce", "Perfecky, Andrey", "Pinto, Virginia", "Pilarski, Laura", "Pincente, F", "Powell, Joanna", "Rampersad, Andy", "Rebelo, Paul", "Ricard, Suzanne", "Rocca, Marino", "Rousseau, Pascale", "Royiwsky, John", "Rubino, Franca", "Salvador, Monica", "Samagalsky, Gloria", "Sator, Anne", "Savoia, Cristiana", "Schomer, Tatjana", "Schroll, Erika", "Sedej, Betty", "Silva-Gomes, Elizabeth", "Skeath-Makxam, Jessica", "smolders-Godfrey, Jennifer", "Sprem, Lidija", "Song, Junho", "Stasiv, Halyna", "Stasiw, Catherine", "Storey, Sandra", "Stroszka, D", "Tomic, Dubravka", "Trasolini, Denise", "Trentadue, Domenic", "Tuohy, Mark", "Viterbo, Iolanda", "Vitro, Julie", "vukasinovic, M", "Warren, Brad (James)", "Wilson, Luke"]
@@ -23,12 +26,16 @@ class mailingList: UIViewController, UITableViewDataSource, UITableViewDelegate,
  
     
     
-    
+    //give the value of table view cell                                                                                                                
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return nameFit.count
     }
     
+    
+    
+    
+    // set up everyline of teacher's name and email address when you search it , it follows your step
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let myCell = tableView.dequeueReusableCell(withIdentifier: "reusableCell") as? mailAddressTableViewCell else {
@@ -39,7 +46,7 @@ class mailingList: UIViewController, UITableViewDataSource, UITableViewDelegate,
         myCell.detailTextLabel?.text = nameFit[indexPath.row].emailAddress
         return myCell
     }
-    
+    //when you click on the table you can email the teacher
     func tableView(_ tableview: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let urlMailToTeacher = URL(string: "mailto:\(nameFit[indexPath.row].emailAddress)") {
             UIApplication.shared.open(urlMailToTeacher)
