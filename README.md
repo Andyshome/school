@@ -13,12 +13,11 @@ Target
 * Add Bus stop near bishop allen prediction ✅
 * Add search bar in mailing list view controller ✅
 * Redesign the Schedule and the Exam calculator ✅
-* Add Berry Rd At Prince Edward Dr South bus stop for route 66 
+* Add Berry Rd At Prince Edward Dr South bus stop for route 66 ✅
+* Add push notification service with third party. ✅
+* Use UIRefreshController to replace the button to refresh the annoucement view controller ✅
 * Add files view controller for students to download the offical files.
 * Add maps of Bishop Allen Academy
-* Add push notification service with third party. 
-* Use UIRefreshController to replace the button to refresh the annoucement view controller 
-
 
 Known Bugs
 -----------
