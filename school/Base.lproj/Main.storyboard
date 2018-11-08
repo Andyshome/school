@@ -365,6 +365,19 @@
                                 <color key="textColor" red="0.30320251570000001" green="0.16105464289999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHe-nP-T4k">
+                                <rect key="frame" x="5" y="148" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="66 to Old Mill"/>
+                                <connections>
+                                    <action selector="oldMill66:" destination="OOU-qb-sXb" eventType="touchUpInside" id="wPS-mM-Sua"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoP-UO-UYm">
+                                <rect key="frame" x="28" y="235" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -703,17 +716,6 @@
                                     <action selector="testButton:" destination="yr1-dd-LPh" eventType="touchUpInside" id="wMK-Uo-Iqp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsR-lQ-gVO">
-                                <rect key="frame" x="295" y="539" width="50" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="en6-5P-EbE"/>
-                                    <constraint firstAttribute="height" constant="49" id="lrr-wI-qPG"/>
-                                </constraints>
-                                <state key="normal" image="refreshbutton"/>
-                                <connections>
-                                    <action selector="refreshButton:" destination="yr1-dd-LPh" eventType="touchUpInside" id="OGI-5t-5Cm"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-Ay-1gO">
                                 <rect key="frame" x="0.0" y="800" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -767,12 +769,10 @@
                             <constraint firstItem="Wlu-u8-upR" firstAttribute="leading" secondItem="gRS-bb-z61" secondAttribute="leading" id="R8u-fK-MS7"/>
                             <constraint firstItem="Wlu-u8-upR" firstAttribute="bottom" secondItem="gRS-bb-z61" secondAttribute="bottom" id="Rj8-1w-Lk5"/>
                             <constraint firstItem="2Wt-RS-WuX" firstAttribute="trailing" secondItem="gRS-bb-z61" secondAttribute="trailing" id="SWe-bs-NAA"/>
-                            <constraint firstItem="gRS-bb-z61" firstAttribute="trailing" secondItem="QsR-lQ-gVO" secondAttribute="trailing" constant="30" id="SyM-94-tDw"/>
                             <constraint firstItem="Vw1-UY-DjF" firstAttribute="trailing" secondItem="gRS-bb-z61" secondAttribute="trailing" id="aSQ-aq-5a3"/>
                             <constraint firstItem="bcw-ae-CO6" firstAttribute="bottom" secondItem="gRS-bb-z61" secondAttribute="bottom" id="agh-gU-wo2"/>
                             <constraint firstItem="Wlu-u8-upR" firstAttribute="top" secondItem="2Wt-RS-WuX" secondAttribute="bottom" id="dpM-3l-TJ4"/>
                             <constraint firstItem="bcw-ae-CO6" firstAttribute="top" secondItem="2Wt-RS-WuX" secondAttribute="bottom" id="gpj-Vx-mk2"/>
-                            <constraint firstItem="gRS-bb-z61" firstAttribute="bottom" secondItem="QsR-lQ-gVO" secondAttribute="bottom" constant="30" id="lbB-XV-2kA"/>
                             <constraint firstItem="owh-ig-hgN" firstAttribute="top" secondItem="2Wt-RS-WuX" secondAttribute="bottom" id="mxP-AT-3IA"/>
                             <constraint firstItem="vQW-6d-9VN" firstAttribute="leading" secondItem="gRS-bb-z61" secondAttribute="leading" id="rvn-2K-d3H"/>
                             <constraint firstItem="bcw-ae-CO6" firstAttribute="trailing" secondItem="gRS-bb-z61" secondAttribute="trailing" id="wIm-Bp-hhg"/>
@@ -1097,7 +1097,6 @@
         <image name="calculator" width="30" height="30"/>
         <image name="labelBackground-1" width="393" height="128"/>
         <image name="planner" width="30" height="30"/>
-        <image name="refreshbutton" width="256" height="256"/>
         <image name="ttc" width="800" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
