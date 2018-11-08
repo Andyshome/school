@@ -38,6 +38,9 @@ class ttcBusViewController: UIViewController {
             }
         }
     }
+    @IBAction func oldMill66(_ sender: Any) {
+        getPRedictionTime(RouteTag: "66", StopTag: "7196")
+    }
     
     @IBAction func RoyalYork15(_ sender: Any) {
         getPRedictionTime(RouteTag: "15", StopTag: "2586")

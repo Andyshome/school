@@ -1,7 +1,6 @@
 import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
-
 class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, UITableViewDataSource, UITableViewDelegate {
     
     // Outlet for my segmented Control
@@ -30,11 +29,62 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     private let scopes = [kGTLRAuthScopeSheetsSpreadsheetsReadonly]
     private let service = GTLRSheetsService()
     let signInButton = GIDSignInButton()
+    lazy var dailyRefreshControll : UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(dailyHandleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.blue
+        return refreshControl
+    }()
+    
+    lazy var longTermRefreshControll : UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(longTermHandleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.blue
+        return refreshControl
+    }()
+    
+    lazy var cafeRefreshControll : UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(cafeHandleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.blue
+        return refreshControl
+    }()
+    
+    
+    @objc func dailyHandleRefresh(_ refreshControl:UIRefreshControl) {
+        
+        
+        
+        refreshControl.endRefreshing()
+        self.dailyArray.removeAll()
+        self.listDailyAnnoucements()
+        Thread.sleep(forTimeInterval: 0.1)
+    }
+    
+    @objc func longTermHandleRefresh(_ refreshControl:UIRefreshControl) {
+        refreshControl.endRefreshing()
+        
+        
+        self.longTermArray.removeAll()
+        self.listLongTermAnnoucements()
+        Thread.sleep(forTimeInterval: 0.1)
+    }
+    
+    
+    @objc func cafeHandleRefresh(_ refreshControl:UIRefreshControl) {
+        refreshControl.endRefreshing()
+        
+        
+        self.cafeSpecialsArray.removeAll()
+        self.listCafeSpecialsAnnoucements()
+        Thread.sleep(forTimeInterval: 0.1)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.dailyTableView.addSubview(dailyRefreshControll)
+        self.longTermTableView.addSubview(longTermRefreshControll)
+        self.cafeSpecialsTableView.addSubview(cafeRefreshControll)
         // Configure Google Sign-in.
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
@@ -67,19 +117,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         pressingSegments()
     }
     
-    @IBAction func refreshButton(_ sender: Any) {
-        // emptying out the daily array and repopulating it "refreshing the data"
-        
-        
-        
-        dailyArray.removeAll()
-        listDailyAnnoucements()
-        longTermArray.removeAll()
-        listLongTermAnnoucements()
-        cafeSpecialsArray.removeAll()
-        listCafeSpecialsAnnoucements()
-    }
-    
     // setting the number of cells to the number of elements in the daily array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -94,8 +131,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! myCustomCellTableViewCell
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! myCustomCellTableViewCell
+        guard dailyArray != [] && longTermArray != [] && cafeSpecialsArray != [] else {
+            return UITableViewCell.init()
+        }
         if tableView.tag == 1 {
             cell.labelDaily.text = dailyArray[indexPath.row]
         } else if tableView.tag == 2 {
