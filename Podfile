@@ -1,7 +1,10 @@
-platform :ios, '8.0'
+platform :ios, '10.0'
 use_frameworks!
 target ‘school’ do
-    pod 'GoogleAPIClientForREST/Sheets', '~> 1.2.1'
-    pod 'Google/SignIn', '~> 3.0.3'
+    pod 'GoogleAPIClientForREST/Sheets'
+    pod 'GoogleSignIn'
     pod 'SwiftBus'
+    pod 'Alamofire'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging' 
 end

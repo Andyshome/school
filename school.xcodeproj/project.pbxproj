@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		2139457720935FFD002CE73D /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2139457620935FFD002CE73D /* MyTabBarViewController.swift */; };
 		21695148204DE4040030777C /* TeacherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695147204DE4040030777C /* TeacherListTableViewController.swift */; };
-		5D4718A61FD87B1200E71774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */; };
-		5D4718A71FD87B1200E71774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */; };
-		5D4718A81FD87B1200E71774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */; };
 		5D49EA751FD87A7300FD2791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D49EA731FD87A7300FD2791 /* Main.storyboard */; };
 		5D49EA7A1FD87A7300FD2791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D49EA781FD87A7300FD2791 /* LaunchScreen.storyboard */; };
 		5D49EA851FD87A7300FD2791 /* schoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49EA841FD87A7300FD2791 /* schoolTests.swift */; };
@@ -20,6 +17,7 @@
 		5D69CC3B1FD87F900094ED8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69CC381FD87F8F0094ED8A /* ViewController.swift */; };
 		5D69CC3C1FD87F900094ED8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69CC391FD87F900094ED8A /* AppDelegate.swift */; };
 		7D17AC4B217110610075D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D17AC4A217110610075D82A /* Assets.xcassets */; };
+		7D42D1442194E10900FBE556 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D42D1432194E10900FBE556 /* GoogleService-Info.plist */; };
 		7DD14776217785C1007BC5E5 /* SchoolScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */; };
 		7DD3C8B6217100D70015D459 /* mailAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */; };
 		7DFD5986216FD5530063B353 /* ttcBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD5985216FD5530063B353 /* ttcBusViewController.swift */; };
@@ -50,7 +48,6 @@
 		21695147204DE4040030777C /* TeacherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherListTableViewController.swift; sourceTree = "<group>"; };
 		4803458BA62033A9A3CC7A03 /* Pods_school.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_school.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D24AB5ADD4CAE6F9F722456 /* Pods-school.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-school.release.xcconfig"; path = "Pods/Target Support Files/Pods-school/Pods-school.release.xcconfig"; sourceTree = "<group>"; };
-		5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D49EA6C1FD87A7300FD2791 /* school.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = school.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D49EA741FD87A7300FD2791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D49EA791FD87A7300FD2791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +64,7 @@
 		5D69CC391FD87F900094ED8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6649167E2F442B4B21B446E5 /* Pods-school.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-school.debug.xcconfig"; path = "Pods/Target Support Files/Pods-school/Pods-school.debug.xcconfig"; sourceTree = "<group>"; };
 		7D17AC4A217110610075D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D42D1432194E10900FBE556 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D5334E1215AF0AD00188A7C /* school.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = school.entitlements; sourceTree = "<group>"; };
 		7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolScheduleVC.swift; sourceTree = "<group>"; };
 		7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mailAddressTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 		5D49EA631FD87A7300FD2791 = {
 			isa = PBXGroup;
 			children = (
-				5D4718A51FD87B1200E71774 /* GoogleService-Info.plist */,
 				5D49EA6E1FD87A7300FD2791 /* school */,
 				5D49EA831FD87A7300FD2791 /* schoolTests */,
 				5D49EA8E1FD87A7300FD2791 /* schoolUITests */,
@@ -152,6 +149,7 @@
 				7D17AC4A217110610075D82A /* Assets.xcassets */,
 				7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */,
 				7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */,
+				7D42D1432194E10900FBE556 /* GoogleService-Info.plist */,
 				7DFD5985216FD5530063B353 /* ttcBusViewController.swift */,
 				5D49EA781FD87A7300FD2791 /* LaunchScreen.storyboard */,
 				21695147204DE4040030777C /* TeacherListTableViewController.swift */,
@@ -302,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D49EA7A1FD87A7300FD2791 /* LaunchScreen.storyboard in Resources */,
-				5D4718A61FD87B1200E71774 /* GoogleService-Info.plist in Resources */,
+				7D42D1442194E10900FBE556 /* GoogleService-Info.plist in Resources */,
 				7D17AC4B217110610075D82A /* Assets.xcassets in Resources */,
 				5D49EA751FD87A7300FD2791 /* Main.storyboard in Resources */,
 			);
@@ -312,7 +310,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4718A71FD87B1200E71774 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +317,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4718A81FD87B1200E71774 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,21 +330,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-school/Pods-school-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftBus/SwiftBus.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -585,7 +589,7 @@
 				INFOPLIST_FILE = school/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bishopallenacademy.com;
+				PRODUCT_BUNDLE_IDENTIFIER = comm.example.school;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "school/school-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -606,7 +610,7 @@
 				INFOPLIST_FILE = school/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bishopallenacademy.com;
+				PRODUCT_BUNDLE_IDENTIFIER = comm.example.school;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "school/school-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
