@@ -7,6 +7,7 @@ Update
 
 * 2018.10.12 Update comment and add bus prediction in this app. Redesign the schedule. Add a search bar in the mailing list
 * 20l8.10.18 Fix bus stop bugs
+* 2018.11.08 Finish push notification and replace refresh button with UIRefreshControll
 
 Target
 ------
