@@ -18,6 +18,8 @@
 		5D69CC3C1FD87F900094ED8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69CC391FD87F900094ED8A /* AppDelegate.swift */; };
 		7D17AC4B217110610075D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D17AC4A217110610075D82A /* Assets.xcassets */; };
 		7D42D1442194E10900FBE556 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D42D1432194E10900FBE556 /* GoogleService-Info.plist */; };
+		7DCF1675219B26530018B868 /* CourseCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7DCF1674219B26530018B868 /* CourseCode.txt */; };
+		7DCF1677219B26F80018B868 /* CourseCodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF1676219B26F80018B868 /* CourseCodeTableViewController.swift */; };
 		7DD14776217785C1007BC5E5 /* SchoolScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */; };
 		7DD3C8B6217100D70015D459 /* mailAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */; };
 		7DFD5986216FD5530063B353 /* ttcBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD5985216FD5530063B353 /* ttcBusViewController.swift */; };
@@ -66,6 +68,8 @@
 		7D17AC4A217110610075D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D42D1432194E10900FBE556 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D5334E1215AF0AD00188A7C /* school.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = school.entitlements; sourceTree = "<group>"; };
+		7DCF1674219B26530018B868 /* CourseCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CourseCode.txt; sourceTree = "<group>"; };
+		7DCF1676219B26F80018B868 /* CourseCodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCodeTableViewController.swift; sourceTree = "<group>"; };
 		7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolScheduleVC.swift; sourceTree = "<group>"; };
 		7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mailAddressTableViewCell.swift; sourceTree = "<group>"; };
 		7DFD5985216FD5530063B353 /* ttcBusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ttcBusViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +152,9 @@
 				7DFD5987216FD5F50063B353 /* finalMarkCalc.swift */,
 				7D17AC4A217110610075D82A /* Assets.xcassets */,
 				7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */,
+				7DCF1676219B26F80018B868 /* CourseCodeTableViewController.swift */,
 				7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */,
+				7DCF1674219B26530018B868 /* CourseCode.txt */,
 				7D42D1432194E10900FBE556 /* GoogleService-Info.plist */,
 				7DFD5985216FD5530063B353 /* ttcBusViewController.swift */,
 				5D49EA781FD87A7300FD2791 /* LaunchScreen.storyboard */,
@@ -302,6 +308,7 @@
 				5D49EA7A1FD87A7300FD2791 /* LaunchScreen.storyboard in Resources */,
 				7D42D1442194E10900FBE556 /* GoogleService-Info.plist in Resources */,
 				7D17AC4B217110610075D82A /* Assets.xcassets in Resources */,
+				7DCF1675219B26530018B868 /* CourseCode.txt in Resources */,
 				5D49EA751FD87A7300FD2791 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +413,7 @@
 				7DFD5986216FD5530063B353 /* ttcBusViewController.swift in Sources */,
 				F292E8A1207466A90068D2BF /* mailingList.swift in Sources */,
 				7DD14776217785C1007BC5E5 /* SchoolScheduleVC.swift in Sources */,
+				7DCF1677219B26F80018B868 /* CourseCodeTableViewController.swift in Sources */,
 				5D69CC3B1FD87F900094ED8A /* ViewController.swift in Sources */,
 				2139457720935FFD002CE73D /* MyTabBarViewController.swift in Sources */,
 				21695148204DE4040030777C /* TeacherListTableViewController.swift in Sources */,
