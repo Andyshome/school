@@ -39,9 +39,9 @@ Thanks to these orgnizations to open source to our program!
 
 
 
-Issus
+Issues
 -------
-If you have any problems, please submit a [Issue](https://github.com/BishopAllenAcademy/school/issues) in our program, we will answer it as soon as possible.
+If you have any problems, please submit an [Issue](https://github.com/BishopAllenAcademy/school/issues) in our program, we will answer it as soon as possible.
 
 Licence
 ---------
