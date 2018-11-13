@@ -8,6 +8,7 @@ Update
 * 2018.10.12 Update comment and add bus prediction in this app. Redesign the schedule. Add a search bar in the mailing list
 * 20l8.10.18 Fix bus stop bugs
 * 2018.11.08 Finish push notification and replace refresh button with UIRefreshControll
+* 2018.11.13 Finish course code search page add route 66 bus near our school
 
 Target
 ------
@@ -17,6 +18,7 @@ Target
 * Add Berry Rd At Prince Edward Dr South bus stop for route 66 ✅
 * Add push notification service with third party. ✅
 * Use UIRefreshController to replace the button to refresh the annoucement view controller ✅
+* Add cousecode searching page, everyone could find their course in this page. ✅
 * Add files view controller for students to download the offical files.
 * Add maps of Bishop Allen Academy
 
