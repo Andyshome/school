@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbM-ap-9AT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbM-ap-9AT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -266,6 +266,7 @@
                         <segue destination="HVg-XK-Yky" kind="relationship" relationship="viewControllers" id="eNU-al-uQZ"/>
                         <segue destination="OOU-qb-sXb" kind="relationship" relationship="viewControllers" id="OSu-Je-YfV"/>
                         <segue destination="OM9-zK-U9J" kind="relationship" relationship="viewControllers" id="CxA-KC-omq"/>
+                        <segue destination="HGT-Vn-6Ya" kind="relationship" relationship="viewControllers" id="75U-2h-r4p"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maY-wh-365" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1083,6 +1084,111 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMw-9M-1oC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1717.3913043478262" y="1258.6956521739132"/>
+        </scene>
+        <!--Mailing List-->
+        <scene sceneID="6oK-2B-2ok">
+            <objects>
+                <viewController id="HGT-Vn-6Ya" customClass="CourseCodeTableViewController" customModule="school" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U5V-of-kGW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J1D-BI-Get">
+                                <rect key="frame" x="0.0" y="102" width="375" height="516"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CourseCell" textLabel="nbo-fD-Dn2" detailTextLabel="Zrj-W0-gLk" style="IBUITableViewCellStyleSubtitle" id="qpU-jQ-ajp" customClass="mailAddressTableViewCell" customModule="school" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qpU-jQ-ajp" id="udJ-7H-1kf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nbo-fD-Dn2">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zrj-W0-gLk">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="subTitleCell" destination="Zrj-W0-gLk" id="ZWd-9r-WrZ"/>
+                                            <outlet property="titleCell" destination="nbo-fD-Dn2" id="9qU-u8-JsV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HGT-Vn-6Ya" id="oIE-LT-q6j"/>
+                                    <outlet property="delegate" destination="HGT-Vn-6Ya" id="hgI-zv-psx"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUC-Dj-Onx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.36937734480000001" green="0.45668080449999998" blue="0.66647553439999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Course Code Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-Pt-auZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="26"/>
+                                <color key="backgroundColor" red="0.22924023869999999" green="0.36072403190000002" blue="0.62221473459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="Juf-hF-ZO4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.81077629330000001" blue="0.2497257292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-XB-Jv4">
+                                <rect key="frame" x="0.0" y="46" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pUC-Dj-Onx" firstAttribute="top" secondItem="U5V-of-kGW" secondAttribute="top" id="2RI-jS-ONe"/>
+                            <constraint firstItem="J1D-BI-Get" firstAttribute="leading" secondItem="6oe-sl-ZCt" secondAttribute="leading" id="2US-sU-vIA"/>
+                            <constraint firstItem="dBh-Pt-auZ" firstAttribute="top" secondItem="pUC-Dj-Onx" secondAttribute="bottom" id="996-tQ-ESA"/>
+                            <constraint firstItem="dBh-Pt-auZ" firstAttribute="leading" secondItem="pUC-Dj-Onx" secondAttribute="leading" id="Cdf-Pb-Agj"/>
+                            <constraint firstItem="Rui-XB-Jv4" firstAttribute="top" secondItem="dBh-Pt-auZ" secondAttribute="bottom" id="HkA-wP-YZS"/>
+                            <constraint firstItem="dBh-Pt-auZ" firstAttribute="top" secondItem="6oe-sl-ZCt" secondAttribute="top" id="IWR-fd-59g"/>
+                            <constraint firstItem="dBh-Pt-auZ" firstAttribute="top" secondItem="pUC-Dj-Onx" secondAttribute="bottom" id="L4f-0K-55F"/>
+                            <constraint firstItem="J1D-BI-Get" firstAttribute="top" secondItem="dBh-Pt-auZ" secondAttribute="bottom" constant="56" id="Pk5-cC-BP0"/>
+                            <constraint firstItem="dBh-Pt-auZ" firstAttribute="leading" secondItem="J1D-BI-Get" secondAttribute="leading" id="UeN-fZ-fiD"/>
+                            <constraint firstItem="Rui-XB-Jv4" firstAttribute="trailing" secondItem="6oe-sl-ZCt" secondAttribute="trailing" id="cVc-mr-XaL"/>
+                            <constraint firstItem="Rui-XB-Jv4" firstAttribute="top" secondItem="dBh-Pt-auZ" secondAttribute="bottom" id="ca9-Py-fNu"/>
+                            <constraint firstItem="Rui-XB-Jv4" firstAttribute="leading" secondItem="6oe-sl-ZCt" secondAttribute="leading" id="gcF-Uw-XmV"/>
+                            <constraint firstItem="Rui-XB-Jv4" firstAttribute="leading" secondItem="6oe-sl-ZCt" secondAttribute="leading" id="j2d-1P-kZo"/>
+                            <constraint firstItem="dBh-Pt-auZ" firstAttribute="trailing" secondItem="pUC-Dj-Onx" secondAttribute="trailing" id="kbQ-jN-szD"/>
+                            <constraint firstItem="J1D-BI-Get" firstAttribute="top" secondItem="Rui-XB-Jv4" secondAttribute="bottom" id="o8D-yE-VOw"/>
+                            <constraint firstItem="Rui-XB-Jv4" firstAttribute="trailing" secondItem="6oe-sl-ZCt" secondAttribute="trailing" id="qma-et-few"/>
+                            <constraint firstItem="dBh-Pt-auZ" firstAttribute="trailing" secondItem="J1D-BI-Get" secondAttribute="trailing" id="r0m-i1-NDt"/>
+                            <constraint firstItem="Rui-XB-Jv4" firstAttribute="top" secondItem="dBh-Pt-auZ" secondAttribute="bottom" id="uCG-7J-wSS"/>
+                            <constraint firstItem="6oe-sl-ZCt" firstAttribute="bottom" secondItem="J1D-BI-Get" secondAttribute="bottom" id="v7g-uW-mMr"/>
+                            <constraint firstItem="6oe-sl-ZCt" firstAttribute="trailing" secondItem="J1D-BI-Get" secondAttribute="trailing" id="vPd-eb-nwO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6oe-sl-ZCt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mailing List" image="address_book" id="Gf1-sF-Agq"/>
+                    <connections>
+                        <outlet property="mySearchBar" destination="Rui-XB-Jv4" id="tQh-a2-uiX"/>
+                        <outlet property="myTableview" destination="J1D-BI-Get" id="Nc9-9c-6wP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHm-4M-5im" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4361" y="1257"/>
         </scene>
     </scenes>
     <resources>
