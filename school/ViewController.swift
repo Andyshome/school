@@ -1,22 +1,21 @@
 import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
-
 class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, UITableViewDataSource, UITableViewDelegate {
- 
+    
     // Outlet for my segmented Control
     @IBOutlet weak var mySegment: UISegmentedControl!
-   
+    
     // Outlet for the Daily annoucements UITableView
     @IBOutlet weak var dailyTableView: UITableView!
     // Outlet for the Long Term annoucements UITableView
     @IBOutlet weak var longTermTableView: UITableView!
     // Outlet for the Cafe Specials annoucements UITableView
     @IBOutlet weak var cafeSpecialsTableView: UITableView!
-   
+    
     //Creating a label for any messages that need to be displayed
     @IBOutlet weak var labelMessages: UILabel!
-
+    
     @IBOutlet weak var signInBlock: UIImageView!
     
     // Array that will hold the daily annoucements
@@ -25,23 +24,74 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     var longTermArray: [String] = []
     // Array that will hold the cafe Specials annoucements
     var cafeSpecialsArray: [String] = []
-  
+    
     // If modifying these scopes, delete your previously saved credentials by resetting the iOS simulator or uninstall the app.
     private let scopes = [kGTLRAuthScopeSheetsSpreadsheetsReadonly]
     private let service = GTLRSheetsService()
     let signInButton = GIDSignInButton()
-
+    lazy var dailyRefreshControll : UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(dailyHandleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.blue
+        return refreshControl
+    }()
+    
+    lazy var longTermRefreshControll : UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(longTermHandleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.blue
+        return refreshControl
+    }()
+    
+    lazy var cafeRefreshControll : UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(cafeHandleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.blue
+        return refreshControl
+    }()
+    
+    
+    @objc func dailyHandleRefresh(_ refreshControl:UIRefreshControl) {
+        
+        
+        
+        refreshControl.endRefreshing()
+        self.dailyArray.removeAll()
+        self.listDailyAnnoucements()
+        Thread.sleep(forTimeInterval: 0.1)
+    }
+    
+    @objc func longTermHandleRefresh(_ refreshControl:UIRefreshControl) {
+        refreshControl.endRefreshing()
+        
+        
+        self.longTermArray.removeAll()
+        self.listLongTermAnnoucements()
+        Thread.sleep(forTimeInterval: 0.1)
+    }
+    
+    
+    @objc func cafeHandleRefresh(_ refreshControl:UIRefreshControl) {
+        refreshControl.endRefreshing()
+        
+        
+        self.cafeSpecialsArray.removeAll()
+        self.listCafeSpecialsAnnoucements()
+        Thread.sleep(forTimeInterval: 0.1)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.dailyTableView.addSubview(dailyRefreshControll)
+        self.longTermTableView.addSubview(longTermRefreshControll)
+        self.cafeSpecialsTableView.addSubview(cafeRefreshControll)
         // Configure Google Sign-in.
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().scopes = scopes
         GIDSignIn.sharedInstance().signInSilently()
         
-    
+        
         
         // Add the sign-in button.
         view.addSubview(signInButton)
@@ -58,31 +108,18 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     
     
     @IBAction func testButton(_ sender: Any) {
-       // print(longTermArray)
-       // print(cafeSpecialsArray)
+        // print(longTermArray)
+        // print(cafeSpecialsArray)
     }
     
     
     @IBAction func mySegmentPressed(_ sender: Any) {
-       pressingSegments()
-    }
-    
-    @IBAction func refreshButton(_ sender: Any) {
-        // emptying out the daily array and repopulating it "refreshing the data"
-      
-        
-        
-        dailyArray.removeAll()
-        listDailyAnnoucements()
-        longTermArray.removeAll()
-        listLongTermAnnoucements()
-        cafeSpecialsArray.removeAll()
-        listCafeSpecialsAnnoucements()
+        pressingSegments()
     }
     
     // setting the number of cells to the number of elements in the daily array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
+        
         if tableView.tag == 1 {
             return(dailyArray.count)
         } else if tableView.tag == 2 {
@@ -94,8 +131,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! myCustomCellTableViewCell
-
+        guard dailyArray != [] && longTermArray != [] && cafeSpecialsArray != [] else {
+            return UITableViewCell.init()
+        }
         if tableView.tag == 1 {
             cell.labelDaily.text = dailyArray[indexPath.row]
         } else if tableView.tag == 2 {
@@ -103,13 +143,13 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         } else {
             cell.labelCafeSpecials.text = cafeSpecialsArray[indexPath.row]
         }
-
+        
         return cell
     }
     
-   
     
-
+    
+    
     // Helper for showing an alert
     func showAlert(title : String, message: String) {
         let alert = UIAlertController(
@@ -117,7 +157,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
             message: message,
             preferredStyle: UIAlertControllerStyle.alert
         )
-
+        
         let ok = UIAlertAction(
             title: "OK",
             style: UIAlertActionStyle.default,
@@ -127,8 +167,8 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         present(alert, animated: true, completion: nil)
     }
     
-
-
+    
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
         
@@ -145,7 +185,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
             listCafeSpecialsAnnoucements()
             emailUsedByStudent = user.profile.email
             print("this id is the following \(emailUsedByStudent)")
-        
+            
         }
         
         if emailUsedByStudent.contains("@tcdsb.ca") {
@@ -153,7 +193,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
             mySegment.isEnabled = true
             
         } else {
-           
+            
             print("before")
             
             dailyTableView.isHidden = true
@@ -169,7 +209,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
             
             // code to change location of sign in button
             signInButton.center = view.center
-         
+            
             print("after")
             showAlert(title: "Must use a TCDSB email" , message: "please clear the app from memory and re-launch it to sign in with tcdsb e-mail")
         }
@@ -257,29 +297,28 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
         
     }
     
-
+    
     // Display the daily spreadsheet:
-    // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
     func listDailyAnnoucements() {
-        let spreadsheetId = "1aHFMi0PBcZnNWCp384Grt--rxYHpvFAG8F5s-hon-C8"
+        let spreadsheetId = ""
         let range = "Form Responses 1!A2:C"
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadsheetId, range:range)
         service.executeQuery(query, delegate: self, didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
     // Display the Long Term spreadsheet:
-    // https://docs.google.com/spreadsheets/d/1QvQFLhSy5gw712dXW3osUrFFXgfIEzaiuw08TC-Nmgg/edit#gid=1922002077
+    // https://docs.google.com/spreadsheets/d/
     func listLongTermAnnoucements() {
-        let spreadsheetId = "1QvQFLhSy5gw712dXW3osUrFFXgfIEzaiuw08TC-Nmgg"
+        let spreadsheetId = ""
         let range = "Form Responses 1!A2:C"
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadsheetId, range:range)
         service.executeQuery(query, delegate: self, didFinish: #selector(displayResultWithTicketLongTerm(ticket:finishedWithObject:error:)))
     }
     
     // Display the Long Term Cafe Specials:
-    // https://docs.google.com/spreadsheets/d/1EpoljIexXIUOJ8XtQlilPNBjHWqaU9F4nA-EsKQSwIY/edit#gid=1958324540
+    // https://docs.google.com/spreadsheets/d/
     func listCafeSpecialsAnnoucements() {
-        let spreadsheetId = "1EpoljIexXIUOJ8XtQlilPNBjHWqaU9F4nA-EsKQSwIY"
+        let spreadsheetId = ""
         let range = "Form Responses 1!A2:C"
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadsheetId, range:range)
         service.executeQuery(query, delegate: self, didFinish: #selector(displayResultWithTicketCafeSpecials(ticket:finishedWithObject:error:)))
