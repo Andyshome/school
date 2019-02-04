@@ -21,6 +21,8 @@ Target
 * Add cousecode searching page, everyone could find their course in this page. ✅
 * Add files view controller for students to download the offical files.
 * Add maps of Bishop Allen Academy
+* Add all cources Information and searching bar, allow users to search courses and courses detail.✅
+
 
 Known Bugs
 -----------
