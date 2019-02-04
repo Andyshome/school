@@ -22,6 +22,7 @@
 		7DCF1677219B26F80018B868 /* CourseCodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF1676219B26F80018B868 /* CourseCodeTableViewController.swift */; };
 		7DD14776217785C1007BC5E5 /* SchoolScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */; };
 		7DD3C8B6217100D70015D459 /* mailAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */; };
+		7DD420852207BF8500AF6223 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD420842207BF8500AF6223 /* DescriptionViewController.swift */; };
 		7DFD5986216FD5530063B353 /* ttcBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD5985216FD5530063B353 /* ttcBusViewController.swift */; };
 		7DFD5988216FD5F50063B353 /* finalMarkCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD5987216FD5F50063B353 /* finalMarkCalc.swift */; };
 		F292E8A1207466A90068D2BF /* mailingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292E8A0207466A90068D2BF /* mailingList.swift */; };
@@ -72,6 +73,7 @@
 		7DCF1676219B26F80018B868 /* CourseCodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCodeTableViewController.swift; sourceTree = "<group>"; };
 		7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolScheduleVC.swift; sourceTree = "<group>"; };
 		7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mailAddressTableViewCell.swift; sourceTree = "<group>"; };
+		7DD420842207BF8500AF6223 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		7DFD5985216FD5530063B353 /* ttcBusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ttcBusViewController.swift; sourceTree = "<group>"; };
 		7DFD5987216FD5F50063B353 /* finalMarkCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finalMarkCalc.swift; sourceTree = "<group>"; };
 		F292E8A0207466A90068D2BF /* mailingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mailingList.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				7DFD5987216FD5F50063B353 /* finalMarkCalc.swift */,
 				7D17AC4A217110610075D82A /* Assets.xcassets */,
 				7DD3C8B5217100D70015D459 /* mailAddressTableViewCell.swift */,
+				7DD420842207BF8500AF6223 /* DescriptionViewController.swift */,
 				7DCF1676219B26F80018B868 /* CourseCodeTableViewController.swift */,
 				7DD14775217785C1007BC5E5 /* SchoolScheduleVC.swift */,
 				7DCF1674219B26530018B868 /* CourseCode.txt */,
@@ -418,6 +421,7 @@
 				2139457720935FFD002CE73D /* MyTabBarViewController.swift in Sources */,
 				21695148204DE4040030777C /* TeacherListTableViewController.swift in Sources */,
 				5D69CC3A1FD87F900094ED8A /* myCustomCellTableViewCell.swift in Sources */,
+				7DD420852207BF8500AF6223 /* DescriptionViewController.swift in Sources */,
 				7DD3C8B6217100D70015D459 /* mailAddressTableViewCell.swift in Sources */,
 				7DFD5988216FD5F50063B353 /* finalMarkCalc.swift in Sources */,
 			);

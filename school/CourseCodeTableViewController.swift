@@ -30,9 +30,10 @@ class CourseCodeTableViewController: UIViewController, UITableViewDataSource, UI
         courseFit = courseArray
         mySearchBar.delegate = self
         myTableview.reloadData()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -74,7 +75,7 @@ class CourseCodeTableViewController: UIViewController, UITableViewDataSource, UI
         
     }
     
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return courseFit.count
@@ -82,9 +83,15 @@ class CourseCodeTableViewController: UIViewController, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CourseCell")!
         cell.textLabel?.text = courseFit[indexPath.row].courseCode
+        
         cell.detailTextLabel?.text = courseFit[indexPath.row].courseInformation
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         courseFit = courseArray.filter({course -> Bool in
             switch searchBar.selectedScopeButtonIndex {
@@ -113,6 +120,26 @@ class CourseCodeTableViewController: UIViewController, UITableViewDataSource, UI
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
     }
-
-   
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "courseCodeInformation" {
+            let indexPath = myTableview.indexPathForSelectedRow!
+            let course = courseFit[indexPath.row]
+            let nav = segue.destination as! UINavigationController
+            
+            let descriptionViewController = nav.topViewController as! DescriptionViewController
+            descriptionViewController.courseCode = course.courseCode
+            descriptionViewController.courseDescription = course.courseDiscription
+            descriptionViewController.courseInformation = course.courseInformation
+            descriptionViewController.coursePrerequisite = course.coursePrerequest
+        }
+    }
+    
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
+    
+    
+    
 }
