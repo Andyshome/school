@@ -9,6 +9,7 @@ Update
 * 20l8.10.18 Fix bus stop bugs
 * 2018.11.08 Finish push notification and replace refresh button with UIRefreshControll
 * 2018.11.13 Finish course code search page add route 66 bus near our school
+* 2019.2.3 The final version of 2018 Fall school app develop team!
 
 Target
 ------
@@ -21,6 +22,8 @@ Target
 * Add cousecode searching page, everyone could find their course in this page. ✅
 * Add files view controller for students to download the offical files.
 * Add maps of Bishop Allen Academy
+* Add all cources Information and searching bar, allow users to search courses and courses detail.✅
+
 
 Known Bugs
 -----------
